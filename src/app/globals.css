@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --accent: #3b82f6;
+  --accent-soft: #dbeafe;
+}
+
+html[data-theme="male"] {
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+}
+
+html[data-theme="female"] {
+  --accent: #ec4899;
+  --accent-soft: #fce7f3;
+}
+
+body {
+  @apply bg-bg text-text;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container-md {
+  @apply max-w-md mx-auto p-4 space-y-4;
+}
+
+.card {
+  @apply rounded-2xl shadow-sm ring-1 ring-border bg-card;
+}
+
+.big-button {
+  @apply w-full py-6 text-xl rounded-2xl font-semibold shadow-sm bg-card border border-border hover:bg-accentSoft active:scale-95 transition flex items-center justify-center gap-2;
+}
+
